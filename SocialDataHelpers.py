@@ -2,7 +2,7 @@
 # nltk.data.path.append('./nltk_data/') #this may need to change depending on when
 # from nltk.corpus import stopwords
 
-class SocialData(object):
+class SocialDataHelpers(object):
 	
 	def __init__(self):
 		#as we add API calls classes and functions, we need to add them to this dictionary
@@ -51,7 +51,7 @@ class Search(object):
 
 
 if __name__ == "__main__":
-	sd = SocialData()
+	sd = SocialDataHelpers()
 	tw = sd.tweetEasy('search', [1,2,3])
 	tw.printData()
 
