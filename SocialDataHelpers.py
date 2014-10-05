@@ -4,13 +4,10 @@
 
 class SocialDataHelpers(object):
 	
-	def __init__(self):
-		#as we add API calls classes and functions, we need to add them to this dictionary
-		self.supportedGetTypes = {'search': self.search}
-
-	def tweetEasy(self, getType, api_results):
+	def __init__(self, getType, api_results):
+		self.supportedGetTypes = {'search': self.search, 'followers/id': self.search}
 		self.api_results = api_results
-		self.getType = getType
+		self.data = 0
 		try:
 			self.data = self.supportedGetTypes[getType]()
 		except:
@@ -18,22 +15,19 @@ class SocialDataHelpers(object):
 		if len(self.api_results) < 1:
 			print 'nothing in dataset'
 			exit()
-		return self.data
-	
+
 	def search(self):
 		return Search(self.api_results)
-
-
 
 class Search(object):
 
 	def __init__(self, api_results):
 		self.data = api_results
-		self.statuses = self.data['statuses']
+		# self.statuses = self.data['statuses']
 
-	def printResults(self):
+	def printData(self):
 		#maybe we can do a pretty print or DUMPS here
-		print self.data
+		return self.data
 
 	def screenNames(self):
 	 	return [s['user']['screen_name'] for s in self.statuses]
@@ -57,9 +51,11 @@ class Search(object):
 
 
 if __name__ == "__main__":
-	sd = SocialDataHelpers()
-	tw = sd.tweetEasy('search', [1,2,3])
-	tw.printData()
+	search = SocialDataHelpers('search', [1,2,3]).data
+	followers = SocialDataHelpers('followers/id', [4,5,6]).data
+	# tw = sd.tweetEasy('search', [1,2,3])
+	print search.printData()
+	print followers.printData()
 
 	#this is what I'm aiming for with how to use this class
 	# mydata.getDict('screenNames', 'hashtags_text')
