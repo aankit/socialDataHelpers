@@ -9,9 +9,9 @@ class SocialDataHelpers(object):
 	def __init__(self, getType, api_results):
 		self.supportedGetTypes = {'search': self.search, 'followers/id': self.search}
 		self.api_results = api_results
-		self.data = 0
+		self.helper = ''
 		try:
-			self.data = self.supportedGetTypes[getType]()
+			self.helper = self.supportedGetTypes[getType]()
 		except:
 			print 'Not a supported GET request...yet'
 		if len(self.api_results) < 1:
@@ -26,6 +26,10 @@ class SocialDataHelpers(object):
 		#maybe we can do a pretty print or DUMPS here
 		return self.data
 
+	def getDict(self, key, value):
+		#would like to return a dict of requested key and value pairs with this fucntion
+		return key, value
+
 class Search(SocialDataHelpers):
 
 	def __init__(self, api_results):
@@ -33,18 +37,11 @@ class Search(SocialDataHelpers):
 		#self.statuses = self.data['statuses']
 
 	def screenNames(self):
-	 	return [s['user']['screen_name'] for s in self.statuses]
+	 	print 'asshole'
+	 	# return [s['user']['screen_name'] for s in self.statuses]
 
 	def hashtags(self):
-		hashtags_text = []
-		for s in self.statuses:
-			hashList = s['entities']['hashtags']
-			if len(hashList)>1:
-				tempList = list()
-				for hashDict in hashList:
-					tempList.append(hashDict['text'])
-				hashtags_text.append(tempList)
-		return hashtags_text
+		return [hd['text'] for s in self.statuses for hd in s['entities']['hashtags']]
 
 	def tweets(self):
 		return [s['text'] for s in self.statuses]
@@ -57,11 +54,10 @@ class Search(SocialDataHelpers):
 
 
 if __name__ == "__main__":
-	search = SocialDataHelpers('search', [1,2,3]).data
-	followers = SocialDataHelpers('followers/id', [4,5,6]).data
-	# tw = sd.tweetEasy('search', [1,2,3])
+	search = SocialDataHelpers('search', [1,2,3]).helper
+	followers = SocialDataHelpers('followers/id', [4,5,6]).helper
 	print search.printData()
-	print followers.printData()
+	print followers.getDict('something', 'else')
 
 	#this is what I'm aiming for with how to use this class
 	# mydata.getDict('screenNames', 'hashtags_text')
