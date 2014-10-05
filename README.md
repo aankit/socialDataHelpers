@@ -2,7 +2,7 @@ Social Data Helpers
 ===================
 
 
-sd = SocialData('API CALL TYPE', 'RESULTS OF CALL').data
+sd = SocialData('API CALL TYPE', 'RESULTS OF CALL').helper
 
 Get a list of all screennames for all statuses in search results like this:
 
