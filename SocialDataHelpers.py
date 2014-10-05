@@ -29,17 +29,18 @@ class Search(object):
 
 	def __init__(self, api_results):
 		self.data = api_results
+		self.statuses = self.data['statuses']
 
 	def printResults(self):
 		#maybe we can do a pretty print or DUMPS here
 		print self.data
 
 	def screenNames(self):
-	 	return [s['user']['screen_name'] for s in self.data[self.data.index('statuses')]]
+	 	return [s['user']['screen_name'] for s in self.statuses]
 
 	def hashtags(self):
 		hashtags_text = []
-		for s in self.data[self.data.index('statuses')]:
+		for s in self.statuses:
 			hashList = s['entities']['hashtags']
 			if len(hashList)>1:
 				tempList = list()
@@ -47,6 +48,9 @@ class Search(object):
 					tempList.append(hashDict['text'])
 				hashtags_text.append(tempList)
 		return hashtags_text
+
+	def tweets(self):
+		return [s['text'] for s in self.statuses]
 
 
 
