@@ -52,6 +52,8 @@ class Search(object):
 	def tweets(self):
 		return [s['text'] for s in self.statuses]
 
+	def users(self):
+		return [s['user']['screen_name'] for s in self.statuses]
 
 
 if __name__ == "__main__":
