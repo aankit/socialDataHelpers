@@ -1,17 +1,16 @@
 Social Data Helpers
 ===================
 
-The module is called Social Data
 
-so first step would be 
+sd = SocialData('API CALL TYPE', 'RESULTS OF CALL').data
 
-sd = SocialData()
+Get a list of all screennames for all statuses in search results like this:
 
-tweetEasy
-=========
 
-get useful dictionaries of specific twitter search and other api 
+users = sd.users()
 
-tw = tweetEasy('API CALL TYPE', 'RESULTS OF CALL')
+
+Got rid fo the tweetEasy method since we are just using Twitter, I don't have an argument for service yet, but I imagine we can add one to handle Instagram.
+
 
 
