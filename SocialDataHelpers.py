@@ -28,6 +28,7 @@ class SocialDataHelpers(object):
 
 	def getDict(self, key, value):
 		#would like to return a dict of requested key and value pairs with this fucntion
+		
 		return key, value
 
 class Search(SocialDataHelpers):
@@ -37,8 +38,7 @@ class Search(SocialDataHelpers):
 		#self.statuses = self.data['statuses']
 
 	def screenNames(self):
-	 	print 'asshole'
-	 	# return [s['user']['screen_name'] for s in self.statuses]
+	 	return [s['user']['screen_name'] for s in self.statuses]
 
 	def hashtags(self):
 		return [hd['text'] for s in self.statuses for hd in s['entities']['hashtags']]
