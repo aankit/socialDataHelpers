@@ -35,22 +35,53 @@ class Search(SocialDataHelpers):
 
 	def __init__(self, api_results):
 		self.data = api_results
-		#self.statuses = self.data['statuses']
+		self.statuses = self.data['statuses'] #self.statuses is a list of dictionaries
+		self.users = [s['user'] for s in self.statuses] #self.users is a list of user dictionaries
+		#important question is tying user data to status data points
 
-	def screenNames(self):
-	 	return [s['user']['screen_name'] for s in self.statuses]
-
+	#status data points of interest, feel free to add to these!
 	def hashtags(self):
 		return [hd['text'] for s in self.statuses for hd in s['entities']['hashtags']]
 
 	def tweets(self):
 		return [s['text'] for s in self.statuses]
 
-	def users(self):
-		return [s['user']['screen_name'] for s in self.statuses]
+	def createdAt(self):
+		return [s['createdAt'] for s in self.statuses]
 
+	#user level data points of interest, , feel free to add to these!
+	def users(self):
+		return [s['screen_name'] for s in self.users]
+
+	def screenNames(self):
+	 	return [s['screen_name'] for s in self.users]
+	
 	def descriptions(self):
-		return [s['user']['description'] for s in self.statuses]
+		return [s['description'] for s in self.users]
+
+	def profileImage(self):
+		return [s['profile_image_url_https'] for s in self.users]
+
+	def timeZone(self):
+		return [s['time_zone'] for s in self.users]
+
+	def followerCount(self):
+		return [s['followers_count'] for s in self.users]
+
+	def protected(self):
+		return [s['protected'] for s in self.users]
+
+	def geoEnabled(self):
+		return [s['geo_enabled'] for s in self.users]
+
+	def statusCount(self):
+		return [s['stasuses_count'] for s in self.users]
+
+	def friendsCounts(self):
+		return [s['friends_count'] for s in self.users]
+
+	def location(self):
+		return [s['location'] for s in self.users]
 
 
 if __name__ == "__main__":
