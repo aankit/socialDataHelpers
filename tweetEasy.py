@@ -1,4 +1,4 @@
-class Search(object):
+class ParseSearch(object):
 
 	def __init__(self, statuses):
 		self.data = statuses #self.statuses is a list of dictionaries
@@ -11,20 +11,20 @@ class Search(object):
 			self.retweets = [s['retweeted_status'] for s in self.data if 'retweeted_status' in s.keys()]
 			# print self.retweets
 		# self.Retweets = Search(self.retweets)
+		# I can structure by status, entity, and user
 		self.dataTypes = {
 			'tweetText': self.tweetText,
 			'createdAt': self.createdAt,
 			'hashtags': self.hashtags,
-			'mentions': self.mentions,
+			'user_mentions': self.mentions,
 			'users': self.userData
 		}
-		#important question is tying user data to status data points
 
 	def getDict(self, key, value):
 		d = dict()
 		for s in self.data:
 			#create a Search object for this one tweet
-			s_search = Search(s)
+			s_search = ParseSearch(s)
 			#use the dataTypes dict to get the key and value for this one tweet
 			if key in s_search.dataTypes.keys():
 				k = s_search.dataTypes[key]()
@@ -70,7 +70,7 @@ class Search(object):
 		else:
 			return [h['text'] for h in self.entities['hashtags'] if h]
 
-	def mentions(self):
+	def user_mentions(self):
 		if type(self.entities) is list:
 			return [m['screen_name'] for e in self.entities for m in e['user_mentions'] if m['screen_name']]
 		else:
@@ -90,7 +90,7 @@ if __name__ == "__main__":
 	import pickle
 	testPickle = open('common core_1412823473.pk1', 'rb')
 	data = pickle.load(testPickle)
-	search = Search(data)
+	search = ParseSearch(data)
 	# followers = SocialDataHelpers('twitter', 'followers/id', [4,5,6]).helper
 	print search.getDict('hashtags', 'screen_name')
 
