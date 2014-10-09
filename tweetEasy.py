@@ -16,7 +16,7 @@ class ParseSearch(object):
 			'tweetText': self.tweetText,
 			'createdAt': self.createdAt,
 			'hashtags': self.hashtags,
-			'user_mentions': self.mentions,
+			'user_mentions': self.user_mentions,
 			'users': self.userData
 		}
 

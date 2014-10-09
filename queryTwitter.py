@@ -4,6 +4,9 @@ class SearchTwitter(object):
 	
 	def __init__(self, q, c, num_iterations):
 		#create twitter object, you should create your own twitterKeys.py file with your keys
+		self.q = q
+		self.c = c
+		self.num_iterations = num_iterations
 		auth = twitter.oauth.OAuth(twitterKeys.TOKEN, twitterKeys.TOKENSECRET, twitterKeys.KEY, twitterKeys.KEYSECRET) 
 		self.tw_api = twitter.Twitter(auth=auth)
 
@@ -18,18 +21,18 @@ class SearchTwitter(object):
 	        return limit['resources']['lists']['/lists/memberships']['remaining']
 
 	def runQuery(self, save=False):
-		search_results = self.tw_api.search.tweets(q=q, count=c)
+		search_results = self.tw_api.search.tweets(q=self.q, count=self.c)
 		statuses = search_results['statuses']
 
-		if num_iterations>1:
-			for i in range(num_iterations):
+		if self.num_iterations>1:
+			for i in range(self.num_iterations):
 				maxID = search_results['search_metadata']['max_id']-1
-				search_results = self.tw_api.search.tweets(q=q, count=c, max_id=maxID)
+				search_results = self.tw_api.search.tweets(q=self.q, count=self.c, max_id=maxID)
 				statuses += search_results['statuses']
 
 		current = time.time()
 		if save:
-			pickleName = '%s_%d.pk1' %(q, current)
+			pickleName = '%s_%d.pk1' %(self.q, current)
 			output = open(pickleName, 'wb')
 			pickle.dump(statuses, output)
 		else:
@@ -44,4 +47,4 @@ if __name__ == '__main__':
 		print "please enter a search string, number of statuses up to 100, and number of requests, up to 180(?)"
 
 	search = SearchTwitter(q, c, num_iterations)
-	search.runQuery()
+	print search.runQuery()
