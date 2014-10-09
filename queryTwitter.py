@@ -1,9 +1,9 @@
 import sys, twitter, twitterKeys, pickle, time
 	
-class Search(object):
+class SearchTwitter(object):
 	
 	def __init__(self, q, c, num_iterations):
-		#create twitter object
+		#create twitter object, you should create your own twitterKeys.py file with your keys
 		auth = twitter.oauth.OAuth(twitterKeys.TOKEN, twitterKeys.TOKENSECRET, twitterKeys.KEY, twitterKeys.KEYSECRET) 
 		self.tw_api = twitter.Twitter(auth=auth)
 
@@ -17,7 +17,7 @@ class Search(object):
 	        limit = t.application.rate_limit_status()
 	        return limit['resources']['lists']['/lists/memberships']['remaining']
 
-	def runQuery(self):
+	def runQuery(self, save=False):
 		search_results = self.tw_api.search.tweets(q=q, count=c)
 		statuses = search_results['statuses']
 
@@ -28,11 +28,12 @@ class Search(object):
 				statuses += search_results['statuses']
 
 		current = time.time()
-
-		pickleName = '%s_%d.pk1' %(q, current)
-
-		output = open(pickleName, 'wb')
-		pickle.dump(statuses, output)
+		if save:
+			pickleName = '%s_%d.pk1' %(q, current)
+			output = open(pickleName, 'wb')
+			pickle.dump(statuses, output)
+		else:
+			return statuses
 
 if __name__ == '__main__':
 	try:
@@ -42,5 +43,5 @@ if __name__ == '__main__':
 	except:
 		print "please enter a search string, number of statuses up to 100, and number of requests, up to 180(?)"
 
-	search = Search(q, c, num_iterations)
+	search = SearchTwitter(q, c, num_iterations)
 	search.runQuery()
