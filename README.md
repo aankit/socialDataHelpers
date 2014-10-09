@@ -2,15 +2,10 @@ Social Data Helpers
 ===================
 
 
-sd = SocialDataHelpers('API CALL TYPE', 'RESULTS OF CALL').helper
-
-Get a list of all screennames for all statuses in search results like this:
-
-
-screenNames = sd.screenNames()
+search = Search(TWITTER_SEARCH_RESULTS)
+search.getDict(KEY, VALUE)
 
 
-Got rid fo the tweetEasy method since we are just using Twitter, I don't have an argument for service yet, but I imagine we can add one to handle Instagram.
 
 
 
