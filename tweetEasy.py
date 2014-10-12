@@ -86,6 +86,20 @@ class ParseSearch(object):
 			else:
 				return ''
 
+	def get_country_woeid_dict(self,woeid_list):
+
+		 new_country_dict = {}
+
+		 if not woeid_list:
+		 	raise Exception("Country list empty")
+
+		 for w_id in woeid_list:
+		 	new_country_dict[w_id['name']] = w_id['woeid']
+		 
+		 self.country_dict = new_country_dict
+
+		 return self.country_dict
+
 if __name__ == "__main__":
 	import pickle
 	testPickle = open('common core_1412823473.pk1', 'rb')
@@ -93,6 +107,10 @@ if __name__ == "__main__":
 	search = ParseSearch(data)
 	# followers = SocialDataHelpers('twitter', 'followers/id', [4,5,6]).helper
 	print search.getDict('hashtags', 'screen_name')
+
+	countries_list = open('worldwide_woeids.data','rb')
+	places = pickle.load(countries_list)
+	countries_list.close()
 
 	#this is what I'm aiming for with how to use this class
 	# mydata.getDict('screenNames', 'hashtags_text')
