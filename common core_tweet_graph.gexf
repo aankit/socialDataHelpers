@@ -1,0 +1,483 @@
+<gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="undirected" mode="static">
+    <attributes class="node" mode="static">
+      <attribute id="0" title="color" type="integer" />
+      <attribute id="1" title="weight" type="integer" />
+    </attributes>
+    <nodes>
+      <node id="wpmoneymaker" label="wpmoneymaker">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="teaparty" label="teaparty">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="RobertDButler2" label="RobertDButler2">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="52" />
+        </attvalues>
+      </node>
+      <node id="pamelankern" label="pamelankern">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="linksharings" label="linksharings">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="greenblogtalks" label="greenblogtalks">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="alaskablog" label="alaskablog">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="104" />
+        </attvalues>
+      </node>
+      <node id="PplSpeak" label="PplSpeak">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="autoaffiliates" label="autoaffiliates">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="StopCommonCore" label="StopCommonCore">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="govchristiestopcc" label="govchristiestopcc">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="RetireTheLeft" label="RetireTheLeft">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="53" />
+        </attvalues>
+      </node>
+      <node id="prasusahay" label="prasusahay">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="education" label="education">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="JustineLassoff" label="JustineLassoff">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="52" />
+        </attvalues>
+      </node>
+      <node id="Jaye6687" label="Jaye6687">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="52" />
+        </attvalues>
+      </node>
+      <node id="tx2014" label="tx2014">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="CCSS" label="CCSS">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="ReadingWellness" label="ReadingWellness">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="MissouriansSignPetition" label="MissouriansSignPetition">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="rabidcon" label="rabidcon">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="USA" label="USA">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="365Arizona" label="365Arizona">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="LA" label="LA">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="wordpresspupil" label="wordpresspupil">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="txltgov" label="txltgov">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="musicgirlsuzi" label="musicgirlsuzi">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="52" />
+        </attvalues>
+      </node>
+      <node id="ww1270" label="ww1270">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="104" />
+        </attvalues>
+      </node>
+      <node id="911USA1" label="911USA1">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="52" />
+        </attvalues>
+      </node>
+      <node id="Conservatives" label="Conservatives">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="travelingair" label="travelingair">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="traveling4water" label="traveling4water">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="dyeemblack1977" label="dyeemblack1977">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="104" />
+        </attvalues>
+      </node>
+      <node id="commoncore" label="commoncore">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="PJNET" label="PJNET">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="JennyLMYL" label="JennyLMYL">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="LSB7G" label="LSB7G">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="78" />
+        </attvalues>
+      </node>
+      <node id="NoDiehl" label="NoDiehl">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="tcot" label="tcot">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="TruthinAmEd" label="TruthinAmEd">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="ce14" label="ce14">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="noprezzie2012" label="noprezzie2012">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="78" />
+        </attvalues>
+      </node>
+      <node id="blogmonetizer" label="blogmonetizer">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="WorldTravel4h2o" label="WorldTravel4h2o">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="Affiliates4" label="Affiliates4">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="BurkinsandYaris" label="BurkinsandYaris">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="menaccc" label="menaccc">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="HomeJobbyJobs" label="HomeJobbyJobs">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="52" />
+        </attvalues>
+      </node>
+      <node id="heartlight2" label="heartlight2">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="52" />
+        </attvalues>
+      </node>
+      <node id="literacylender" label="literacylender">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="TXMomlaughs" label="TXMomlaughs">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="104" />
+        </attvalues>
+      </node>
+      <node id="tp1776" label="tp1776">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="104" />
+        </attvalues>
+      </node>
+      <node id="women" label="women">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="rmirod" label="rmirod">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="52" />
+        </attvalues>
+      </node>
+      <node id="TeaParty" label="TeaParty">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="CommonCore" label="CommonCore">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="GSolarPanels" label="GSolarPanels">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="26" />
+        </attvalues>
+      </node>
+      <node id="golfernine999" label="golfernine999">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="104" />
+        </attvalues>
+      </node>
+      <node id="stopcommoncore" label="stopcommoncore">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="ismaelcruzperez" label="ismaelcruzperez">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="78" />
+        </attvalues>
+      </node>
+      <node id="math" label="math">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="dulaney_l" label="dulaney_l">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="104" />
+        </attvalues>
+      </node>
+      <node id="Conscores" label="Conscores">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="104" />
+        </attvalues>
+      </node>
+      <node id="Education" label="Education">
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="1" />
+        </attvalues>
+      </node>
+      <node id="RightCandidates" label="RightCandidates">
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="104" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="wpmoneymaker" target="CommonCore" weight="26" />
+      <edge id="1" source="teaparty" target="alaskablog" weight="26" />
+      <edge id="2" source="teaparty" target="golfernine999" weight="26" />
+      <edge id="3" source="teaparty" target="ww1270" weight="26" />
+      <edge id="4" source="teaparty" target="dulaney_l" weight="26" />
+      <edge id="5" source="teaparty" target="dyeemblack1977" weight="26" />
+      <edge id="6" source="teaparty" target="TXMomlaughs" weight="26" />
+      <edge id="7" source="teaparty" target="RightCandidates" weight="26" />
+      <edge id="8" source="RobertDButler2" target="txltgov" weight="26" />
+      <edge id="9" source="RobertDButler2" target="tx2014" weight="26" />
+      <edge id="10" source="pamelankern" target="StopCommonCore" weight="26" />
+      <edge id="11" source="linksharings" target="CommonCore" weight="26" />
+      <edge id="12" source="greenblogtalks" target="CommonCore" weight="26" />
+      <edge id="13" source="alaskablog" target="women" weight="26" />
+      <edge id="14" source="alaskablog" target="tcot" weight="26" />
+      <edge id="15" source="alaskablog" target="LA" weight="26" />
+      <edge id="16" source="PplSpeak" target="LSB7G" weight="26" />
+      <edge id="17" source="autoaffiliates" target="CommonCore" weight="26" />
+      <edge id="18" source="StopCommonCore" target="noprezzie2012" weight="26" />
+      <edge id="19" source="StopCommonCore" target="911USA1" weight="26" />
+      <edge id="20" source="StopCommonCore" target="heartlight2" weight="26" />
+      <edge id="21" source="StopCommonCore" target="musicgirlsuzi" weight="26" />
+      <edge id="22" source="StopCommonCore" target="Jaye6687" weight="26" />
+      <edge id="23" source="govchristiestopcc" target="tp1776" weight="26" />
+      <edge id="24" source="RetireTheLeft" target="RetireTheLeft" weight="26" />
+      <edge id="25" source="RetireTheLeft" target="USA" weight="26" />
+      <edge id="26" source="prasusahay" target="ce14" weight="26" />
+      <edge id="27" source="education" target="HomeJobbyJobs" weight="26" />
+      <edge id="28" source="education" target="rmirod" weight="26" />
+      <edge id="29" source="education" target="Conscores" weight="26" />
+      <edge id="30" source="JustineLassoff" target="Education" weight="26" />
+      <edge id="31" source="JustineLassoff" target="commoncore" weight="26" />
+      <edge id="32" source="Jaye6687" target="stopcommoncore" weight="26" />
+      <edge id="33" source="CCSS" target="ismaelcruzperez" weight="26" />
+      <edge id="34" source="ReadingWellness" target="BurkinsandYaris" weight="26" />
+      <edge id="35" source="MissouriansSignPetition" target="LSB7G" weight="26" />
+      <edge id="36" source="rabidcon" target="stopcommoncore" weight="26" />
+      <edge id="37" source="USA" target="heartlight2" weight="26" />
+      <edge id="38" source="USA" target="musicgirlsuzi" weight="26" />
+      <edge id="39" source="USA" target="911USA1" weight="26" />
+      <edge id="40" source="365Arizona" target="CommonCore" weight="26" />
+      <edge id="41" source="LA" target="golfernine999" weight="26" />
+      <edge id="42" source="LA" target="ww1270" weight="26" />
+      <edge id="43" source="LA" target="dulaney_l" weight="26" />
+      <edge id="44" source="LA" target="dyeemblack1977" weight="26" />
+      <edge id="45" source="LA" target="TXMomlaughs" weight="26" />
+      <edge id="46" source="LA" target="RightCandidates" weight="26" />
+      <edge id="47" source="wordpresspupil" target="CommonCore" weight="26" />
+      <edge id="48" source="ww1270" target="women" weight="26" />
+      <edge id="49" source="ww1270" target="tcot" weight="26" />
+      <edge id="50" source="Conservatives" target="Conscores" weight="26" />
+      <edge id="51" source="travelingair" target="CommonCore" weight="26" />
+      <edge id="52" source="traveling4water" target="CommonCore" weight="26" />
+      <edge id="53" source="dyeemblack1977" target="women" weight="26" />
+      <edge id="54" source="dyeemblack1977" target="tcot" weight="26" />
+      <edge id="55" source="PJNET" target="tp1776" weight="26" />
+      <edge id="56" source="JennyLMYL" target="menaccc" weight="26" />
+      <edge id="57" source="LSB7G" target="NoDiehl" weight="26" />
+      <edge id="58" source="tcot" target="golfernine999" weight="26" />
+      <edge id="59" source="tcot" target="dulaney_l" weight="26" />
+      <edge id="60" source="tcot" target="TXMomlaughs" weight="26" />
+      <edge id="61" source="tcot" target="tp1776" weight="26" />
+      <edge id="62" source="tcot" target="RightCandidates" weight="26" />
+      <edge id="63" source="TruthinAmEd" target="stopcommoncore" weight="26" />
+      <edge id="64" source="ce14" target="ismaelcruzperez" weight="26" />
+      <edge id="65" source="noprezzie2012" target="stopcommoncore" weight="52" />
+      <edge id="66" source="blogmonetizer" target="CommonCore" weight="26" />
+      <edge id="67" source="WorldTravel4h2o" target="CommonCore" weight="26" />
+      <edge id="68" source="Affiliates4" target="CommonCore" weight="26" />
+      <edge id="69" source="menaccc" target="literacylender" weight="26" />
+      <edge id="70" source="HomeJobbyJobs" target="CommonCore" weight="26" />
+      <edge id="71" source="TXMomlaughs" target="women" weight="26" />
+      <edge id="72" source="tp1776" target="stopcommoncore" weight="26" />
+      <edge id="73" source="women" target="golfernine999" weight="26" />
+      <edge id="74" source="women" target="dulaney_l" weight="26" />
+      <edge id="75" source="women" target="RightCandidates" weight="26" />
+      <edge id="76" source="rmirod" target="CommonCore" weight="26" />
+      <edge id="77" source="TeaParty" target="Conscores" weight="26" />
+      <edge id="78" source="CommonCore" target="GSolarPanels" weight="26" />
+      <edge id="79" source="CommonCore" target="Conscores" weight="26" />
+      <edge id="80" source="ismaelcruzperez" target="math" weight="26" />
+    </edges>
+  </graph>
+</gexf>
