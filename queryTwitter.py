@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import sys, twitter, twitterKeys, pickle, time
 	
 class SearchTwitter(object):
@@ -26,17 +27,21 @@ class SearchTwitter(object):
 
 		if self.num_iterations>1:
 			for i in range(self.num_iterations):
-				maxID = search_results['search_metadata']['max_id']-1
+				maxID = getMaxID(search_results)
 				search_results = self.tw_api.search.tweets(q=self.q, count=self.c, max_id=maxID)
 				statuses += search_results['statuses']
 
 		current = time.time()
 		if save:
-			pickleName = '%s_%d.pk1' %(self.q, current)
+			pickleName = '%s_%d.p' %(self.q, current)
 			output = open(pickleName, 'wb')
 			pickle.dump(statuses, output)
 		else:
 			return statuses
+
+	def getMaxID(self, search_results):
+		params = {a:b for a,b in [x.split('=') for x in search_results['search_metadata']['next_results'][1:].split('&')]}
+   		return int(params['max_id'])
 
 if __name__ == '__main__':
 	try:

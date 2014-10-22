@@ -53,8 +53,3 @@ plt.show()
 
 nx.write_gexf(g, '%s_tweet_graph.gexf' % q)
 print '%s_tweet_graph.gexf' % q
-
-
-
-
-
