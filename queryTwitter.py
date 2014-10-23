@@ -43,6 +43,41 @@ class SearchTwitter(object):
 		params = {a:b for a,b in [x.split('=') for x in search_results['search_metadata']['next_results'][1:].split('&')]}
    		return int(params['max_id'])
 
+	def get_country_woeid_dict(self,woeid_list):
+
+		 new_country_dict = {}
+
+		 if not woeid_list:
+		 	raise Exception("Country list empty")
+
+		 for w_id in woeid_list:
+		 	new_country_dict[w_id['name']] = w_id['woeid']
+
+		 return new_country_dict
+
+	def trends(self,country_dict=None,country_or_place_id=None):
+		if country_or_place_id:
+			if isinstance(country_or_place_id,int):
+				return self.tw_api.trends.place(_id=country_or_place_id)
+			
+			elif isinstance(country_or_place_id,(str,unicode)):
+				if not country_dict:
+					raise Exception("Places dictionary empty")
+				woeid = country_dict[country_or_place_id]
+				if not woeid:
+					raise Exception("Place not in dictionary")
+				return self.tw_api.trends.place(_id=woeid)
+
+			else: raise Exception("Cannot recognize - ",country_or_place_id)
+			
+		return self.tw_api.trends.place(_id=1)
+
+
+	""" Returns countries woeid list from twitter.
+		This can be used instead of loading countries data from file"""
+	def get_countries_woeid_list_from_twitter(self):
+		return self.twitter_api.trends.available()
+
 if __name__ == '__main__':
 	try:
 		q = sys.argv[1]
