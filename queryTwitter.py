@@ -1,13 +1,9 @@
 #!/usr/bin/env python
-import sys, twitter, twitterKeys, pickle, time
+import sys, twitter, pickle, time
 	
-class SearchTwitter(object):
+class Rest(object):
 	
-	def __init__(self, q, c, num_iterations):
-		#create twitter object, you should create your own twitterKeys.py file with your keys
-		self.q = q
-		self.c = c
-		self.num_iterations = num_iterations
+	def __init__(self, twitterKeys):
 		auth = twitter.oauth.OAuth(twitterKeys.TOKEN, twitterKeys.TOKENSECRET, twitterKeys.KEY, twitterKeys.KEYSECRET) 
 		self.tw_api = twitter.Twitter(auth=auth)
 
@@ -21,14 +17,14 @@ class SearchTwitter(object):
 	        limit = t.application.rate_limit_status()
 	        return limit['resources']['lists']['/lists/memberships']['remaining']
 
-	def runQuery(self, save=False):
+	def searchTwitter(self, q, c, num_iterations, save=False):
 		search_results = self.tw_api.search.tweets(q=self.q, count=self.c)
 		statuses = search_results['statuses']
 		print 'queryTwitter-runQuery: got first set of statuses'
-		if self.num_iterations>1:
-			for i in range(self.num_iterations):
+		if num_iterations>1:
+			for i in range(num_iterations):
 				maxID = self.getMaxID(search_results)
-				search_results = self.tw_api.search.tweets(q=self.q, count=self.c, max_id=maxID)
+				search_results = self.tw_api.search.tweets(q=q, count=c, max_id=maxID)
 				statuses += search_results['statuses']
 
 		current = time.time()
@@ -75,10 +71,18 @@ class SearchTwitter(object):
 	def locationTrends(self, locationList):
 		trends = []
 		for location in locationList:
-			placeTrends = tw_api.trends.place(_id=location)
+			placeTrends = self.tw_api.trends.place(_id=location)
 			for t in placeTrends[0]['trends']:
 				trends.append(t['name'])
 		return trends
+
+	def getCountryTrends(self, cID):
+		avail = self.get_countries_woeid_list_from_twitter()
+		locations = []
+		for c in avail:
+			if c['countryCode'] == cID:
+				locations.append(c['woeid'])
+		return locations
 
 	""" Returns countries woeid list from twitter.
 		This can be used instead of loading countries data from file"""
