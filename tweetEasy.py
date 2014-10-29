@@ -44,10 +44,16 @@ class ParseSearch(object):
 
 	def makeDict(self, d, k, v):
 		if k in d.keys():
-			d[k].append(v)
+			if type(v) is list and len(v)>0:
+				for i in v:
+					d[k].append(v)
+			elif v!=None:	
+				d[k].append(v)
 		else:
-			d[k] = list()
-			d[k].append(v)
+			if type(v) is list and len(v)>0:
+				d[k] = v
+			elif v!=None:
+				d[k] = [v]
 		return d
 
 	#status data points of interest, feel free to add to these!
@@ -68,7 +74,11 @@ class ParseSearch(object):
 		if type(self.entities) is list:
 			return [h['text'] for e in self.entities for h in e['hashtags'] if h]
 		else:
-			return [h['text'] for h in self.entities['hashtags'] if h]
+			for h in self.entities['hashtags']:
+				if h['text'] != None:
+					return h['text']
+				else:
+					pass
 
 	def user_mentions(self):
 		if type(self.entities) is list:
@@ -76,7 +86,8 @@ class ParseSearch(object):
 		else:
 			return [m['screen_name'] for m in self.entities['user_mentions'] if m['screen_name']]
 
-	#user level data points of interest, , feel free to add to these!
+	#user level data points of interest, includes all
+	#
 	def userData(self, dataType):
 		if type(self.users) is list:
 			return [s[dataType] for s in self.users if s[dataType]]

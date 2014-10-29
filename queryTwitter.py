@@ -24,10 +24,10 @@ class SearchTwitter(object):
 	def runQuery(self, save=False):
 		search_results = self.tw_api.search.tweets(q=self.q, count=self.c)
 		statuses = search_results['statuses']
-
+		print 'queryTwitter-runQuery: got first set of statuses'
 		if self.num_iterations>1:
 			for i in range(self.num_iterations):
-				maxID = getMaxID(search_results)
+				maxID = self.getMaxID(search_results)
 				search_results = self.tw_api.search.tweets(q=self.q, count=self.c, max_id=maxID)
 				statuses += search_results['statuses']
 
@@ -72,11 +72,18 @@ class SearchTwitter(object):
 			
 		return self.tw_api.trends.place(_id=1)
 
+	def locationTrends(self, locationList):
+		trends = []
+		for location in locationList:
+			placeTrends = tw_api.trends.place(_id=location)
+			for t in placeTrends[0]['trends']:
+				trends.append(t['name'])
+		return trends
 
 	""" Returns countries woeid list from twitter.
 		This can be used instead of loading countries data from file"""
 	def get_countries_woeid_list_from_twitter(self):
-		return self.twitter_api.trends.available()
+		return self.tw_api.trends.available()
 
 if __name__ == '__main__':
 	try:
