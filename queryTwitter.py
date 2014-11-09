@@ -81,7 +81,7 @@ class Rest(object):
 		locations = []
 		for c in avail:
 			if c['countryCode'] == cID:
-				locations.append(c['woeid'])
+				locations.append((c['woeid'], c['name'])
 		return locations
 
 	""" Returns countries woeid list from twitter.
